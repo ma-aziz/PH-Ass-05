@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geometry Genius</title>
+
+    <!-- JS Link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="p-8 rounded-8">
+    <!-- Heading Section -->
+    <!-- -------------- -->
+
+    <header>
+      <div class="bg-teal-100 rounded p-8 grid grid-cols-2 flex">
+        <div>
+          <h1 class="font-bold text-4xl">Interactive</h1>
+          <p><span class="font-semibold text-2xl">Geometry Book</span></p>
+        </div>
+        <div class="content-right justify-right">
+          <form action="blog.html">
+            <button
+              class="btn-blog bg-sky-500 py-2 px-12 font-bold text-white rounded absolute top-20 right-16 ml-96"
+            >
+              Blog
+            </button>
+          </form>
+        </div>
+      </div>
+    </header>
+
+    <!-- Triangle Section -->
+    <!-- ---------------- -->
+
+    <div class="grid grid-cols-4 gap-4 pt-8">
+      <div
+        class="border-2 rounded grid place-items-center py-5 hover:bg-red-300"
+      >
+        <div>
+          <img src="images/triangle.png" alt="" />
+        </div>
+        <h1 class="pt-5 font-bold">Triangle</h1>
+        <p>Area (A) = 0.5 x b x h</p>
+        <div class="flex my-5">
+          <input
+            class="bg-aqua-100 w-12 text-center"
+            type="text"
+            name=""
+            id="base-value"
+          />
+          <p>cm</p>
+          <input
+            class="bg-aqua-100 w-12 ml-2 text-center"
+            type="text"
+            name=""
+            id="height-value"
+          />
+          <p>cm</p>
+        </div>
+        <div>
+          <button
+            id="triangle-value"
+            class="px-16 py-2 bg-sky-500 font-bold text-white rounded"
+          >
+            Calculate
+          </button>
+        </div>
+      </div>
+
+      <!-- Rectangle section-->
+      <!-- ------------------- -->
+
+      <div
+        class="border-2 rounded grid place-items-center py-5 hover:bg-lime-300"
+      >
+        <div>
+          <img src="images/rectangle.png" alt="" />
+        </div>
+        <h1 class="pt-5 font-bold">Rectangle</h1>
+        <p>Area (A) = w x l</p>
+        <div class="flex my-5">
+          <input
+            id="width-value"
+            class="bg-gray-100 w-12 text-center"
+            type="text"
+            name=""
+            id=""
+          />
+          <p>cm</p>
+          <input
+            id="height-value"
+            class="bg-gray-100 w-12 ml-2 text-center"
+            type="text"
+            name=""
+            id=""
+          />
+          <p>cm</p>
+        </div>
+        <div>
+          <button
+            id="rectangle-value"
+            class="px-16 py-2 bg-sky-500 font-bold text-white rounded"
+          >
+            Calculate
+          </button>
+        </div>
+      </div>
+
+      <!-- Parallelogram Section-->
+      <!-- --------------------- -->
+
+      <div
+        class="border-2 rounded grid place-items-center py-5 hover:bg-yellow-300"
+      >
+        <div>
+          <img src="images/parallelogram.png" alt="" />
+        </div>
+        <h1 class="pt-5 font-bold">Parallelogram</h1>
+        <p>Area (A) = b x h</p>
+        <div class="flex my-5">
+          <p>b=10cm, h=12cm</p>
+        </div>
+        <div>
+          <button
+            id="parallelogram-value"
+            class="px-16 py-2 bg-sky-500 font-bold text-white rounded"
+          >
+            Calculate
+          </button>
+        </div>
+      </div>
+
+      <!-- Area Calculation part-->
+      <!-- -------------------- -->
+
+      <div class="border-2 rounded content-center pl-16 py-5 px-2">
+        <h1 class="pl-16 pt-5 font-bold"><u>Area Calculation</u></h1>
+        <div class="py-8 grid grid-cols-3">
+          <h5><span id="geometric-shape"></span></h5>
+          <br />
+          <h5><span id="final-output"></span></h5>
+          <br />
+        </div>
+      </div>
+
+      <!-- Rhombus Section-->
+      <!-- ---------------- -->
+
+      <div
+        class="border-2 rounded grid place-items-center py-5 hover:bg-purple-300"
+      >
+        <div>
+          <img src="images/rhombus.png" alt="" />
+        </div>
+        <h1 class="pt-5 font-bold">Rhombus</h1>
+        <p>Area (A) = 0.5 x d1 x d2</p>
+        <div class="flex my-5">
+          <p>d<sub>1</sub> = 16cm, d<sub>2</sub> = 8cm</p>
+        </div>
+        <div>
+          <button
+            id="rhombus-value"
+            class="px-16 py-2 bg-sky-500 font-bold text-white rounded"
+          >
+            Calculate
+          </button>
+        </div>
+      </div>
+
+      <!-- Pentagon section-->
+      <!-- --------------- -->
+
+      <div
+        class="border-2 rounded grid place-items-center py-5 hover:bg-fuchsia-300"
+      >
+        <div>
+          <img src="images/pentagon.png" alt="" />
+        </div>
+        <h1 class="pt-5 font-bold">Pentagon</h1>
+        <p>Area (A) = 0.5 x p x b</p>
+        <div class="flex my-5">
+          <p>p = 6 cm, b = 10 cm</p>
+        </div>
+        <div>
+          <button
+            id="pentagon-value"
+            class="px-16 py-2 bg-sky-500 font-bold text-white rounded"
+          >
+            Calculate
+          </button>
+        </div>
+      </div>
+
+      <!-- Ellipse Section-->
+      <!-- ---------------- -->
+
+      <div
+        class="border-2 rounded grid place-items-center py-5 hover:bg-orange-300"
+      >
+        <div>
+          <img src="images/ellipse.png" alt="" />
+        </div>
+        <h1 class="pt-5 font-bold">Ellipse</h1>
+        <p>Area (A) = πab</p>
+        <div class="flex my-5">
+          <p>a = 10cm, b = 4cm</p>
+        </div>
+        <div>
+          <button
+            id="ellipse-value"
+            class="px-16 py-2 bg-sky-500 font-bold text-white rounded"
+          >
+            Calculate
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="js/event.js"></script>
+  </body>
+</html>
